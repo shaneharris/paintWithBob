@@ -68,7 +68,7 @@ export class Setup{
         };
     }
     setupSocket(){
-        this.socket = io('http://localhost:8080/');
+        this.socket = io('http://xactaccounts.co.uk:8080/');
         this.socket.on('seat-taken',socket_id=>{
             this.socket_id = socket_id;
             let canvas = document.querySelector('#canvasPlane');
