@@ -306,7 +306,7 @@ export class Painter{
             clearTimeout(updateThrottle);
             updateThrottle = setTimeout(()=>{
                 let xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-                xmlhttp.open("POST", "http://localhost:8080/player-image");
+                xmlhttp.open("POST", "http://xactaccounts.co.uk:8080/player-image");
                 xmlhttp.setRequestHeader("Content-Type", "application/json");
                 xmlhttp.send(JSON.stringify({position:_this.canvas_properties.seat_number, image:_this.canvas.toDataURL('image/jpeg', 1.0)}));
                 (<any>document.querySelector('a-scene')

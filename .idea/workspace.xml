@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ef53c9-1105-481e-9df3-f31159ad24a9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/assets/models/logo_web.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/assets/models/pencil.dae" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/assets/models/pencil1.mtl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/assets/models/pencil1.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/menu.class.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.html" afterPath="$PROJECT_DIR$/out/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.js" afterPath="$PROJECT_DIR$/out/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="$PROJECT_DIR$/src/main.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/setup.class.ts" afterPath="$PROJECT_DIR$/src/app/Painter.class.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Painter.class.ts" afterPath="$PROJECT_DIR$/src/app/Painter.class.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,8 +52,8 @@
       <file leaf-file-name="Painter.class.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="155" column="89" lean-forward="false" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="89" />
+            <state relative-caret-position="289">
+              <caret line="77" column="44" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -112,6 +101,7 @@
       <find>width</find>
       <find>schema</find>
       <find>selected_position</find>
+      <find>localhost</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -308,12 +298,12 @@
       <workItem from="1505124560455" duration="15000" />
       <workItem from="1505554089116" duration="5883000" />
       <workItem from="1505561185164" duration="18334000" />
-      <workItem from="1505580359860" duration="6826000" />
+      <workItem from="1505580359860" duration="6935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97039000" />
+    <option name="totallyTimeSpent" value="97148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -769,8 +759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="155" column="89" lean-forward="false" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="89" />
+        <state relative-caret-position="289">
+          <caret line="77" column="44" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="44" />
           <folding />
         </state>
       </provider>
