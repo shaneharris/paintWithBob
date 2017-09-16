@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86ef53c9-1105-481e-9df3-f31159ad24a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.html" afterPath="$PROJECT_DIR$/out/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Painter.class.ts" afterPath="$PROJECT_DIR$/src/app/Painter.class.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+            <state relative-caret-position="451">
+              <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -49,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Painter.class.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Painter.class.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3901">
-              <caret line="465" column="61" lean-forward="false" selection-start-line="465" selection-start-column="50" selection-end-line="465" selection-end-column="61" />
+            <state relative-caret-position="405">
+              <caret line="475" column="20" lean-forward="true" selection-start-line="475" selection-start-column="20" selection-end-line="475" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -116,8 +117,8 @@
         <option value="$PROJECT_DIR$/src/app/setup.class.ts" />
         <option value="$PROJECT_DIR$/src/main.ts" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/src/app/Painter.class.ts" />
         <option value="$PROJECT_DIR$/out/index.html" />
+        <option value="$PROJECT_DIR$/src/app/Painter.class.ts" />
       </list>
     </option>
   </component>
@@ -298,12 +299,12 @@
       <workItem from="1505124560455" duration="15000" />
       <workItem from="1505554089116" duration="5883000" />
       <workItem from="1505561185164" duration="18334000" />
-      <workItem from="1505580359860" duration="7452000" />
+      <workItem from="1505580359860" duration="7725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97665000" />
+    <option name="totallyTimeSpent" value="97938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -749,18 +750,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
+    <entry file="file://$PROJECT_DIR$/out/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3901">
-          <caret line="465" column="61" lean-forward="false" selection-start-line="465" selection-start-column="50" selection-end-line="465" selection-end-column="61" />
+        <state relative-caret-position="451">
+          <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/index.html">
+    <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+        <state relative-caret-position="405">
+          <caret line="475" column="20" lean-forward="true" selection-start-line="475" selection-start-column="20" selection-end-line="475" selection-end-column="20" />
           <folding />
         </state>
       </provider>
