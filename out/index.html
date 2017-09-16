@@ -3,20 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Grasslands</title>
-    <script src="http://xactaccounts.co.uk:8080/socket.io/socket.io.js"></script>
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
     <script src="https://sdk.altvr.com/libs/altspace.js/2.6.0/altspace.min.js"></script>
     <!--<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.6.1/dist/altspace.min.js"></script>-->
     <script src="index.js"></script>
 </head>
 <body>
-<a-scene altspace='fullspace: true;' sync-system="author: shaneharris; app:paintWithBobadad;" gamepad-update>
+<a-scene altspace='fullspace: true;' sync-system="author: shaneharris; app:paintWithBob;" gamepad-update>
+
+    <a-entity position="0 3 0" rotation="0 0 0" scale="5 5 2" n-layout-browser="url: http://youtube.com; isEnclosure:true" visible=""></a-entity>
     <a-assets>
+        <canvas id="player-canvas-0" crossorigin="anonymous"></canvas>
+        <canvas id="player-canvas-1" crossorigin="anonymous"></canvas>
         <canvas id="my-canvas" crossorigin="anonymous"></canvas>
-        <canvas id="color-block" height="150" width="150"></canvas>
-        <canvas id="color-strip" height="150" width="30"></canvas>
+        <canvas id="color-block" crossorigin="anonymous" height="35" width="35"></canvas>
+        <canvas id="color-strip" crossorigin="anonymous" height="75" width="1"></canvas>
         <canvas id="brush-size-picker" height="16" width="128"></canvas>
-        <img id="placeholder" src="/assets/images/placeholder.jpg"/>
+        <img id="placeholder0" src="/assets/images/placeholder.jpg"/>
+        <img id="placeholder1" src="/assets/images/placeholder.jpg"/>
         <a-mixin id="left-box"
                  material="shader:flat;color: grey; "
                  geometry="primitive:box"
@@ -26,22 +30,27 @@
                  rotation="-60 -90 30"
                  scale="0.22 0.005 0.005">
         </a-mixin>
+        <a-mixin id="paint-canvas0" sync sync-paint="player_0"></a-mixin>
+        <a-mixin id="paint-canvas1" sync sync-paint="player_1"></a-mixin>
     </a-assets>
     <a-entity one-per-user="mixin: left-box" id="paintBrush"></a-entity>
 
-    <a-entity id="canvasPlane" geometry="primitive: plane" material="shader:flat;src: #my-canvas"
-              draw-canvas="my-canvas" rotation="0 -90 0">
+    <a-entity id="canvasPlane"
+              material="shader:flat;src: #my-canvas"
+              geometry="primitive: plane"
+              draw-canvas="my-canvas" rotation="0 0 0"
+    >
     </a-entity>
-    <a-entity rotation="0 -90 0" brush-size-picker>
+    <a-entity rotation="0 0 0" brush-size-picker >
         <a-entity id="brushBlock" geometry="primitive: plane" material="shader:flat; color: white;" scale="0.395 0.1 0.1"></a-entity>
         <a-entity id="brushBlockRail" geometry="primitive: plane" material="shader:flat; color: grey;" scale="0.36 0.01 0.1" position="0 0 0.001"></a-entity>
         <a-entity id="brushBlockHandle" geometry="primitive: sphere" material="shader:flat; color: black;" scale="0.005 0.005 0.005" position="-0.17 0 0.002"></a-entity>
     </a-entity>
 
-    <a-entity id="colorPicker" color-picker>
-        <a-entity id="colorLabel" geometry="primitive: plane" material="shader:flat; color: red;" rotation="0 -90 0" scale="0.2 0.1 0.1"></a-entity>
-        <a-entity id="colorBlock" geometry="primitive: plane" material="shader:flat;src: #color-block" rotation="0 -90 0"></a-entity>
-        <a-entity id="colorStrip" geometry="primitive: plane" material="shader:flat;src: #color-strip" rotation="0 -90 0"></a-entity>
+    <a-entity id="colorPicker" color-picker >
+        <a-entity id="colorLabel" geometry="primitive: plane" material="shader:flat; color: red;" rotation="0 0 0" scale="0.2 0.1 1" color-toggle></a-entity>
+        <a-entity id="colorBlock" geometry="primitive: plane" material="shader:flat;src: #color-block" rotation="0 0 0"></a-entity>
+        <a-entity id="colorStrip" geometry="primitive: plane" material="shader:flat;src: #color-strip" rotation="0 0 0"></a-entity>
     </a-entity>
 
 
@@ -61,42 +70,20 @@
     <!--n-cockpit-parent>-->
     <!--</a-entity>-->
 
+    <a-entity one-per-user="mixin: paint-canvas0"></a-entity>
+    <a-entity one-per-user="mixin: paint-canvas1"></a-entity>
+    <a-entity id="player_0">
+        <a-entity geometry="primitive: plane" material="side:double;shader:flat;src:#placeholder0"
+                  height="1" width="1" position="0 0 0">
 
-    <a-entity id="player_0" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
+        </a-entity>
+    </a-entity>
+    <a-entity id="player_1">
+        <a-entity geometry="primitive: plane" material="side:double;shader:flat;src:#placeholder1"
+                  height="1" width="1" position="0 0 0" >
 
-    <a-entity id="player_1" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_2" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_3" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_4" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_5" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_6" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_7" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="1" width="1" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_8" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="0.2" width="0.2" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_9" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="0.8" width="0.6" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_10" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="0.8" width="0.6" position="0 1 0" scale="0 0 0"></a-entity>
-
-    <a-entity id="player_11" geometry="primitive: plane" material="side:double;shader:flat;src: #placeholder"
-              height="0.2" width="0.2" position="0 1 0" scale="0 0 0"></a-entity>
+        </a-entity>
+    </a-entity>
 
 </a-scene>
 </body>

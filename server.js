@@ -6,6 +6,9 @@ let WebServer = {
 		this.express = require('express');
 		this.http = require('http');
 		this.io = require('socket.io');
+		this.bodyParser = require('body-parser');
+		this.cors = require('cors');
+		this.fs = require("fs");
 	},
 	initialize:function(){
 		this.defaults();
@@ -17,6 +20,20 @@ let WebServer = {
 		serverObject.app=this.express();
 		serverObject.server=this.http.createServer(serverObject.app);
 		serverObject.socket=this.io(serverObject.server);
+		serverObject.app.use(this.cors({ origin: true }));
+		serverObject.app.use( this.bodyParser.json() );
+		serverObject.app.post('/player-image', (req,res)=> {
+			try{
+				req.body = JSON.parse(req.body);
+			}catch(e){}
+			if(req.body.image&&(req.body.position===0||req.body.position===1)){
+				let base64Data = req.body.image.replace(/^data:image\/jpeg;base64,/, "");
+				this.fs.writeFile(__dirname + directory+"media/player"+req.body.position+".jpeg", base64Data, 'base64', function(err) {
+					console.log(err);
+				});
+			}
+			res.send('done');
+		});
 		serverObject.app.use(this.express.static(__dirname + directory));
 		serverObject.app.get('/', function(req,res) {
 			res.sendFile(__dirname + directory +'/index.html');
@@ -41,6 +58,7 @@ let WebServer = {
 	},
 	setupSocket:function(){
 		this.staticServer.socket.on('connection',socket=>{
+			console.log('connection')
 			socket.on('take-seat',message=>{
 				socket.join(message.room_id);
 				let game_sockets = this.staticServer.socket.sockets.adapter.rooms[message.room_id].sockets;
@@ -61,6 +79,9 @@ let WebServer = {
 					console.log('seat-unavailable','room:',socket.game_room,'socketId:',socket.id,'position:',message.position,'userId:',message.user_id);
 				}
 			});
+			socket.on('image',e=>{
+				console.log(e)
+			})
 			socket.on('leave-seat',()=>{
 				socket.leave(socket.game_room);
 				console.log('leave-seat','room:',socket.game_room,'socketId:',socket.id,'position:',socket.game_position,'userId:',socket.game_user_id);

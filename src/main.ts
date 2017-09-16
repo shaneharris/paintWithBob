@@ -1,8 +1,2 @@
-import { Setup } from './app/setup.class';
-export class Main{
-    setup:Setup;
-    constructor(){
-        this.setup = new Setup();
-    }
-}
-new Main();
+import {Painter} from './app/Painter.class';
+new Painter();
