@@ -38,10 +38,10 @@
     <a-entity id="canvasPlane"
               material="shader:flat;src: #my-canvas"
               geometry="primitive: plane"
-              draw-canvas="my-canvas" rotation="0 0 0"
+              draw-canvas="my-canvas" rotation="0 0 0" position="0 -99 0"
     >
     </a-entity>
-    <a-entity rotation="0 0 0" brush-size-picker >
+    <a-entity rotation="0 0 0" brush-size-picker position="0 -99 0">
         <a-entity id="brushBlock" geometry="primitive: plane" material="shader:flat; color: white;" scale="0.395 0.1 0.1"></a-entity>
         <a-entity id="brushBlockRail" geometry="primitive: plane" material="shader:flat; color: grey;" scale="0.36 0.01 0.1" position="0 0 0.001"></a-entity>
         <a-entity id="brushBlockHandle" geometry="primitive: sphere" material="shader:flat; color: black;" scale="0.005 0.005 0.005" position="-0.17 0 0.002"></a-entity>
