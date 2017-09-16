@@ -322,8 +322,10 @@ export class Painter{
         AFRAME.registerComponent('draw-canvas', {
             schema: {default: ''},
             init:function(){
-                this.el.setAttribute('position',_this.canvas_properties.position);
-                this.el.setAttribute('scale',_this.canvas_properties.width+' '+_this.canvas_properties.height+' 1');
+                // if(_this.selected_position!==-1) {
+                //     this.el.setAttribute('position', _this.canvas_properties.position);
+                //     this.el.setAttribute('scale', _this.canvas_properties.width + ' ' + _this.canvas_properties.height + ' 1');
+                // }
                 _this.canvas = (<HTMLCanvasElement>document.getElementById(this.data));
                 _this.ctx = _this.canvas.getContext('2d');
                 _this.canvas.width = _this.canvas_properties.canvas_width;
