@@ -465,7 +465,7 @@ export class Painter{
             this.canvas_properties.seat_number = position;
             let canvas = document.querySelector('#canvasPlane');
             canvas.setAttribute("position",this.canvas_properties.position);
-            document.getElementById('player_'+position).setAttribute('position',point.x+' 3 '+point.z);
+            document.getElementById('player_'+position).setAttribute('scale','0 3 0');
             this.selected_position = position;
         }
     }
