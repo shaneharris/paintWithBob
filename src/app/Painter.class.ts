@@ -242,6 +242,9 @@ export class Painter{
                 });
             },
             tick:function(){
+                if(_this.selected_position!==-1){
+                    this.el.setAttribute("scale","1 1 1");
+                }
                 color_label.setAttribute('position',{x:_this.canvas_properties.position.x+0.2,y:_this.canvas_properties.position.y+0.455,z:_this.canvas_properties.position.z})
                 if(_this.color_picker_open){
                     color_block.setAttribute('position',{x:_this.canvas_properties.position.x+0.485,y:_this.canvas_properties.position.y+0.275,z:_this.canvas_properties.position.z})
@@ -290,10 +293,12 @@ export class Painter{
                 });
             },
             tick:function(){
-                this.el.setAttribute('position',{x:_this.canvas_properties.position.x-0.1025,y:_this.canvas_properties.position.y+0.455,z:_this.canvas_properties.position.z});
+
                 if(_this.selected_position!==-1){
-                    this.el.setAttribute('scale',"1 1 1");
+                    this.el.setAttribute("scale","1 1 1");
                 }
+                this.el.setAttribute('position',{x:_this.canvas_properties.position.x-0.1025,y:_this.canvas_properties.position.y+0.455,z:_this.canvas_properties.position.z});
+
                 _this.getPaintPoint(this.el.object3D.position,0.34,0.1)
                     .then((point:any)=>{
                         setSize(point);
@@ -322,10 +327,8 @@ export class Painter{
         AFRAME.registerComponent('draw-canvas', {
             schema: {default: ''},
             init:function(){
-                // if(_this.selected_position!==-1) {
-                //     this.el.setAttribute('position', _this.canvas_properties.position);
-                //     this.el.setAttribute('scale', _this.canvas_properties.width + ' ' + _this.canvas_properties.height + ' 1');
-                // }
+                this.el.setAttribute('position',_this.canvas_properties.position);
+                //this.el.setAttribute('scale',_this.canvas_properties.width+' '+_this.canvas_properties.height+' 1');
                 _this.canvas = (<HTMLCanvasElement>document.getElementById(this.data));
                 _this.ctx = _this.canvas.getContext('2d');
                 _this.canvas.width = _this.canvas_properties.canvas_width;
@@ -470,7 +473,7 @@ export class Painter{
             this.canvas_properties.seat_number = position;
             let canvas = document.querySelector('#canvasPlane');
             canvas.setAttribute("position",this.canvas_properties.position);
-            canvas.setAttribute('scale',"1 1 1");
+            canvas.setAttribute("scale",this.canvas_properties.width+' '+this.canvas_properties.height+' 1');
             document.getElementById('player_'+position).setAttribute('scale','0 3 0');
             this.selected_position = position;
         }

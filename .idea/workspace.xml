@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ef53c9-1105-481e-9df3-f31159ad24a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/media/player0.jpeg" afterPath="$PROJECT_DIR$/out/media/player0.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.html" afterPath="$PROJECT_DIR$/out/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.js" afterPath="$PROJECT_DIR$/out/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Painter.class.ts" afterPath="$PROJECT_DIR$/src/app/Painter.class.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,8 +55,8 @@
       <file leaf-file-name="Painter.class.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="324" column="16" lean-forward="false" selection-start-line="324" selection-start-column="19" selection-end-line="327" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="316" column="63" lean-forward="false" selection-start-line="316" selection-start-column="63" selection-end-line="316" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -102,6 +105,7 @@
       <find>schema</find>
       <find>selected_position</find>
       <find>localhost</find>
+      <find>local</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -298,12 +302,12 @@
       <workItem from="1505124560455" duration="15000" />
       <workItem from="1505554089116" duration="5883000" />
       <workItem from="1505561185164" duration="18334000" />
-      <workItem from="1505580359860" duration="7817000" />
+      <workItem from="1505580359860" duration="8302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98030000" />
+    <option name="totallyTimeSpent" value="98515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -759,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Painter.class.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="324" column="16" lean-forward="false" selection-start-line="324" selection-start-column="19" selection-end-line="327" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="316" column="63" lean-forward="false" selection-start-line="316" selection-start-column="63" selection-end-line="316" selection-end-column="63" />
           <folding />
         </state>
       </provider>
